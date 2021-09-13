@@ -44,10 +44,18 @@ TEST_SUITE ("Example derived tests.") {
          *
          * const auto result = Parser::parse(report);
          * std::cout << report_type(result.reportMetadata.type) << "\n";
-         * // Create another test: std::cout << result.groups.size() << " groups parsed\n";
          */
         const auto result = Parser::parse(report);
         REQUIRE(report_type(result.reportMetadata.type) == "METAR");
     }
 
+    TEST_CASE ("Number of groups in the example report.") {
+        /* Example snippet:
+         *
+         * const auto result = Parser::parse(report);
+         * std::cout << result.groups.size() << " groups parsed\n";
+         */
+        const auto result = Parser::parse(report);
+        REQUIRE(result.groups.size() == 14);
+    }
 }
