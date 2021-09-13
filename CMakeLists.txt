@@ -56,7 +56,7 @@ add_test(metaf_example metaf_test)
 
 message(STATUS "Note the fetched includes are taken from below: ${FETCHCONTENT_BASE_DIR}")
 if (METAF_EXAMPLES)
-    macro(metaf_example EXAMPLENAME)
+    macro(metaf_examples EXAMPLENAME)
         add_executable(${EXAMPLENAME} ${ARGN})
         set_target_properties(${EXAMPLENAME} PROPERTIES FOLDER examples)
         set_target_properties(${EXAMPLENAME} PROPERTIES CXX_STANDARD 17)
