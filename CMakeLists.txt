@@ -50,7 +50,7 @@ set_target_properties(metaf_test PROPERTIES CXX_STANDARD 17)
 # ---- Enable testing ----
 
 enable_testing() 
-add_test(metaf_example metaf_test)
+add_test(metaf_test metaf_test)
 
 # ---- Create the examples ----
 
